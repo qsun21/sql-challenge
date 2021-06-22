@@ -46,3 +46,7 @@ CREATE TABLE dept_emp (
 	CONSTRAINT fk_emp_no
 		FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
+
+ALTER TABLE dept_emp ADD PRIMARY KEY (emp_no, dept_no);
+ALTER TABLE dept_manager ADD PRIMARY KEY (dept_no, emp_no);
+ALTER TABLE salaries ADD PRIMARY KEY (emp_no);
